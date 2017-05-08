@@ -1,3 +1,6 @@
+
+/* All the 'id' and 'class' names are self-explanatory*/
+
 body{
     font-family: "Segoe UI", Arial, sans-serif !important;
 }
@@ -94,11 +97,11 @@ body{
     background-color: palegreen;
 }   
 
-.classA{
+.classTable{
   display: table;         
   width: 86%;         
 }
-.classB{
+.classTableRow{
   height: auto;
   display: table-row;
   width: 100%;
@@ -107,7 +110,7 @@ body{
   border-right: 1px solid #ceaaaa;
   border-collapse: collapse;
 }
-.classC{
+.classColumn{
   height: 50px;
   line-height: 50px;
   float: left; /* fix for  buggy browsers */
