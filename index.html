@@ -21,10 +21,10 @@
                     
                     <div  class="labelTags2">
                         <select id="typeId" class="selectClass">
-                            <option value="select a type">Select a type</option>
-                            <option value="new">New</option>
-                            <option value="used">Used</option>
-                            <option value="certified">Certified</option>
+                            <option value="Select a type">Select a type</option>
+                            <option value="New">New</option>
+                            <option value="Used">Used</option>
+                            <option value="Certified">Certified</option>
                         </select>
                     </div>
                     <div  class="labelTags2"><input id="makeIdIBox" class="makeClass" type = "text" value="" placeholder="Please enter make ..."/></div>
@@ -40,17 +40,8 @@
             </div>
 
 
-            <!--<div class="resultSetContainer" ng-if="items.length > 0" >
-                <div class="resultSetClass" ng-repeat="item in items track by $index" ng-class="{selected: $index === realIndex}">
-                    <div class="resultRows" ng-bind="item.type"></div>
-                    <div class="resultRows" ng-bind="item.makeName"></div>
-                    <div class="resultRows" ng-bind="item.modelName"></div>
-                    <hr>
-                </div>
-            </div>-->
-
             <div class="classA" ng-if="items.length > 0" >
-                <div class="classB" ng-repeat="item in items track by $index" ng-class="{selected: $index === realIndex}">
+                <div class="classB" ng-repeat="item in items track by $index" ng-class="{selected: realIndexArray.indexOf($index) > -1}">
                     <div class="classC" ng-bind="item.type"></div><div class="classC" ng-bind="item.makeName"></div><div class="classC" ng-bind="item.modelName"></div>
                 </div>
             </div>
@@ -59,8 +50,8 @@
                 <button class="toJsonConverterClass" id="toJsonConverterId" ng-click="toJsonConverter();">JSON</button>
             </div>
 
-            <div class="textAreaContainer" ng-if="false">
-                <textarea rows="30" cols="70" id="toJsonTextAreaId" class="toJsonTextAreaClass"></textarea>
+            <div class="jsonDivContainer" ng-if="showTextArea">
+                <div  ng-repeat="jsonString in myJsonStringDisplayArray" ng-bind="jsonString"></div>
             </div>
         </div>
 
