@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Ness Exercise</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        
+    </head>
+    <body>
+        <div class="mainContainer" ng-app="nessExerciseApp" ng-controller="nessExerciseController">
+            <div class="inputElementsContainer">
+
+                <div class="divTagName">
+                    <div class="labelTags"> Type </div>
+                    <div class="labelTags"> Make </div>
+                    <div class="labelTags"> Model </div> 
+                </div>
+                <div class="divInputTags">
+                    
+                    <div  class="labelTags"><select id="typeId" class="selectClass">
+                        <option value="select a type">Select a type</option>
+                        <option value="new">New</option>
+                        <option value="used">Used</option>
+                        <option value="certified">Certified</option>
+                    </select></div>
+                    <div  class="labelTags"><input id="makeIdIBox" class="makeClass" type = "text" value="" placeholder="Please enter make ..."/></div>
+                    <div  class="labelTags"><input id="modelIdIBox" class="modelClass" type = "text" value="" placeholder="Please Enter Model ..." /></div>
+
+                    <button class="addButton" ng-click="addItems();">&#10133</button>
+                </div>
+                <hr />
+                <div class="searchBox" style="float:right;">
+                    <input id="searchIBoxId" class="searchIBoxClass" ng-model="searchQuery" ng-change="checkValidity();" type="search">
+                    <button class="searchBoxIcon" id="searchBoxIconId" disabled="true" ng-click="search();">&#128270;</button>
+                </div>
+            </div>
+
+
+            <div class="resultSetContainer" ng-if="items.length > 0" >
+                <div class="resultSetClass" ng-repeat="item in items track by $index" ng-class="{selected: $index === realIndex}">
+                    <div class="resultRows" ng-bind="item.type"></div>
+                    <div class="resultRows" ng-bind="item.makeName"></div>
+                    <div class="resultRows" ng-bind="item.modelName"></div>
+                    <hr>
+                </div>
+            </div>
+
+            <div class="toJsonConverterContainer" ng-if="items.length > 0">
+                <button class="toJsonConverterClass" id="toJsonConverterId" ng-click="toJsonConverter();">To JSON</button>
+            </div>
+
+            <div class="textAreaContainer" ng-if="items.length">
+                <textarea rows="30" cols="70" id="toJsonTextAreaId" class="toJsonTextAreaClass"></textarea>
+            </div>
+        </div>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
+
