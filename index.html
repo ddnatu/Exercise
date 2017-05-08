@@ -12,45 +12,54 @@
             <div class="inputElementsContainer">
 
                 <div class="divTagName">
-                    <div class="labelTags"> Type </div>
-                    <div class="labelTags"> Make </div>
-                    <div class="labelTags"> Model </div> 
+                    <div class="labelTags1"> Type </div>
+                    <div class="labelTags1"> Make </div>
+                    <div class="labelTags1"> Model </div> 
+                    <div class="labelTags1"> &nbsp; </div> 
                 </div>
                 <div class="divInputTags">
                     
-                    <div  class="labelTags"><select id="typeId" class="selectClass">
-                        <option value="select a type">Select a type</option>
-                        <option value="new">New</option>
-                        <option value="used">Used</option>
-                        <option value="certified">Certified</option>
-                    </select></div>
-                    <div  class="labelTags"><input id="makeIdIBox" class="makeClass" type = "text" value="" placeholder="Please enter make ..."/></div>
-                    <div  class="labelTags"><input id="modelIdIBox" class="modelClass" type = "text" value="" placeholder="Please Enter Model ..." /></div>
+                    <div  class="labelTags2">
+                        <select id="typeId" class="selectClass">
+                            <option value="select a type">Select a type</option>
+                            <option value="new">New</option>
+                            <option value="used">Used</option>
+                            <option value="certified">Certified</option>
+                        </select>
+                    </div>
+                    <div  class="labelTags2"><input id="makeIdIBox" class="makeClass" type = "text" value="" placeholder="Please enter make ..."/></div>
+                    <div  class="labelTags2"><input id="modelIdIBox" class="modelClass" type = "text" value="" placeholder="Please Enter Model ..." /></div>
 
-                    <button class="addButton" ng-click="addItems();">&#10133</button>
+                    <div class="labelTags2"><button class="addButton" ng-click="addItems();">&#10133</button></div>
                 </div>
                 <hr />
                 <div class="searchBox" style="float:right;">
-                    <input id="searchIBoxId" class="searchIBoxClass" ng-model="searchQuery" ng-change="checkValidity();" type="search">
+                    <input type="search" id="searchIBoxId" class="searchIBoxClass" ng-model="searchQuery" ng-change="checkValidity();">
                     <button class="searchBoxIcon" id="searchBoxIconId" disabled="true" ng-click="search();">&#128270;</button>
                 </div>
             </div>
 
 
-            <div class="resultSetContainer" ng-if="items.length > 0" >
+            <!--<div class="resultSetContainer" ng-if="items.length > 0" >
                 <div class="resultSetClass" ng-repeat="item in items track by $index" ng-class="{selected: $index === realIndex}">
                     <div class="resultRows" ng-bind="item.type"></div>
                     <div class="resultRows" ng-bind="item.makeName"></div>
                     <div class="resultRows" ng-bind="item.modelName"></div>
                     <hr>
                 </div>
+            </div>-->
+
+            <div class="classA" ng-if="items.length > 0" >
+                <div class="classB" ng-repeat="item in items track by $index" ng-class="{selected: $index === realIndex}">
+                    <div class="classC" ng-bind="item.type"></div><div class="classC" ng-bind="item.makeName"></div><div class="classC" ng-bind="item.modelName"></div>
+                </div>
             </div>
 
             <div class="toJsonConverterContainer" ng-if="items.length > 0">
-                <button class="toJsonConverterClass" id="toJsonConverterId" ng-click="toJsonConverter();">To JSON</button>
+                <button class="toJsonConverterClass" id="toJsonConverterId" ng-click="toJsonConverter();">JSON</button>
             </div>
 
-            <div class="textAreaContainer" ng-if="items.length">
+            <div class="textAreaContainer" ng-if="false">
                 <textarea rows="30" cols="70" id="toJsonTextAreaId" class="toJsonTextAreaClass"></textarea>
             </div>
         </div>
@@ -60,4 +69,3 @@
         <script src="js/main.js"></script>
     </body>
 </html>
-
