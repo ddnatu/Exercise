@@ -1,4 +1,3 @@
-
 body{
     font-family: "Segoe UI", Arial, sans-serif !important;
 }
@@ -14,15 +13,28 @@ body{
     display: inline-block;
     background-color:#d8dcd5;
     padding: 3%;
+    border:1px solid #d8dcd5;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: -webkit-linear-gradient(#FFF, #d8dcd5);
+    background: -moz-linear-gradient(#FFF, #d8dcd5);
+    background: -o-linear-gradient(#FFF, #d8dcd5);
+    background: linear-gradient(#FFF, #d8dcd5); /* For Safari */ /* For Opera  */ /* For Firefox  */ /* Standard syntax */
+    border: 1px solid #ceaaaa;
 }
-.labelTags{
-    display: inline-block;
-        width:calc(100%/3 - 10px); 
+.labelTags1{
+        display: inline-block;
+        width:calc(100%/4 - 10px); 
+
+}
+.labelTags2{
+        display: inline-block;
+        width:calc(100%/4 - 10px); 
 
 }
 .divInputClass{
     display: inline-block;
-    width:calc(100%/3 - 10px); 
+    width:calc(100%/4 - 10px); 
 }
 .selectClass{
     padding: 7px;
@@ -31,15 +43,15 @@ body{
 .makeClass{
     padding: 7px;
     background-color:#FFF;
+    border-radius: 5px;
 }
 .modelClass{    
     padding: 7px;
     background-color:#FFF;
+    border-radius: 5px;
 }
 .addButton{
-    float: right;
-    margin-top: -35px;
-    margin-right: -16px;
+    font-weight: bold;
     cursor: pointer;
     padding: 6px 17px;
     background-color: #544f4f;
@@ -59,23 +71,23 @@ body{
 }
 .resultRows{
     display: inline-block;
-    width:calc(100%/3 - 10px);
+    width:calc(100%/3);
+}
+
+
+.searchBox{
+    width: 40%;
+    float: right;
+    margin-right: 7%;
 }
 
 .searchIBoxClass{
     padding:6px;
-    width:70%;
+    width:50%;
 }
 .searchBoxIcon{
-    border: 1px solid;
-    border-radius: 10px; 
-    background-color: #544f4f;
-    color:#FFF;
+    color:#333;
     padding: 6px 17px;
-    background: -webkit-linear-gradient(rgba(204, 197, 187, 0.86),#544f4f); /* For Safari */
-    background: -o-linear-gradient(rgba(204, 197, 187, 0.86),#544f4f); /* For Opera  */
-    background: -moz-linear-gradient(rgba(204, 197, 187, 0.86),#544f4f); /* For Firefox  */
-    background: linear-gradient(rgba(204, 197, 187, 0.86),#544f4f); /* Standard syntax */
 }
 
 .selected{
@@ -83,6 +95,8 @@ body{
 }
 
 .toJsonConverterClass{
+    font-weight: bold;
+    margin-top:50px;
     float: right;
     border: 1px solid;
     border-radius: 10px; 
@@ -93,4 +107,30 @@ body{
     background: -o-linear-gradient(rgba(204, 197, 187, 0.86),#544f4f); /* For Opera  */
     background: -moz-linear-gradient(rgba(204, 197, 187, 0.86),#544f4f); /* For Firefox  */
     background: linear-gradient(rgba(204, 197, 187, 0.86),#544f4f); /* Standard syntax */
+}   
+
+.classA{
+  display: table;         
+  width: 102%;         
 }
+.classB{
+  height: auto;
+  display: table-row;
+  width: 100%;
+  clear: both;
+  border-left: 1px solid #ceaaaa;
+  border-right: 1px solid #ceaaaa;
+  border-collapse: collapse;
+}
+.classC{
+  height: 50px;
+  line-height: 50px;
+  float: left; /* fix for  buggy browsers */
+  display: table-column;         
+  width: calc(100%/3 - 5px);         
+  text-align: center;
+  border: 1px solid #ceaaaa;
+  border-collapse: collapse;
+  
+}
+
