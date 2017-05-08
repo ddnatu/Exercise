@@ -9,7 +9,7 @@ body{
 
 
 .inputElementsContainer{
-    width: 95%;
+    width: 80%;
     display: inline-block;
     background-color:#d8dcd5;
     padding: 3%;
@@ -92,26 +92,11 @@ body{
 
 .selected{
     background-color: palegreen;
-}
-
-.toJsonConverterClass{
-    font-weight: bold;
-    margin-top:50px;
-    float: right;
-    border: 1px solid;
-    border-radius: 10px; 
-    background-color: #544f4f;
-    color:#FFF;
-    padding: 6px 17px;
-    background: -webkit-linear-gradient(rgba(204, 197, 187, 0.86),#544f4f); /* For Safari */
-    background: -o-linear-gradient(rgba(204, 197, 187, 0.86),#544f4f); /* For Opera  */
-    background: -moz-linear-gradient(rgba(204, 197, 187, 0.86),#544f4f); /* For Firefox  */
-    background: linear-gradient(rgba(204, 197, 187, 0.86),#544f4f); /* Standard syntax */
 }   
 
 .classA{
   display: table;         
-  width: 102%;         
+  width: 86%;         
 }
 .classB{
   height: auto;
@@ -132,5 +117,30 @@ body{
   border: 1px solid #ceaaaa;
   border-collapse: collapse;
   
+}
+
+.toJsonConverterClass{
+    font-weight: bold;
+    float: right;
+    margin-top: 7%;
+    margin-right: 20%;
+    border: 1px solid;
+    border-radius: 10px; 
+    background-color: #544f4f;
+    color:#FFF;
+    padding: 6px 17px;
+    background: -webkit-linear-gradient(rgba(204, 197, 187, 0.86),#544f4f); /* For Safari */
+    background: -o-linear-gradient(rgba(204, 197, 187, 0.86),#544f4f); /* For Opera  */
+    background: -moz-linear-gradient(rgba(204, 197, 187, 0.86),#544f4f); /* For Firefox  */
+    background: linear-gradient(rgba(204, 197, 187, 0.86),#544f4f); /* Standard syntax */
+}
+
+.jsonDivContainer{
+    padding:4%;
+    font-size: 0.9rem;
+    margin-top: 7%;
+    background-color: #ceaaaa;
+    width: 50%;
+    min-height: 100px;
 }
 
