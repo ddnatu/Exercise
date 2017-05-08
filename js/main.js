@@ -1,4 +1,3 @@
-
 var nessApp = angular.module('nessExerciseApp',[]);
     
     nessApp.controller('nessExerciseController',function($scope){
@@ -8,23 +7,22 @@ var nessApp = angular.module('nessExerciseApp',[]);
         $scope.showTextArea = false;
         $scope.tobeHighlighted = false;
         $scope.realIndex ;
+        $scope.realIndexArray = [];
+        $scope.myJsonStringDisplayArray = [];
+
 
         $scope.addItems = function(items){
             var typeName = document.getElementById("typeId");
             var selectedValue = typeName.options[typeName.selectedIndex].value;
-            if (selectedValue == 'new' || selectedValue == 'used' || selectedValue == 'certified'){
+            if (selectedValue == 'New' || selectedValue == 'Used' || selectedValue == 'Certified'){
                 var makeName = document.getElementById('makeIdIBox').value;
                 var modelName = document.getElementById('modelIdIBox').value;
-                //console.log('typename',typeName);
                 var itemObject = {
                     'type':selectedValue,
                     'makeName':makeName,
                     'modelName':modelName
                 }
-                //console.log(modelName,makeName);
-                //console.log('itemObject',itemObject);
                 $scope.items.push(itemObject);
-                //console.log('itemsarray',$scope.items.length);
             }else{
                 alert("Please select a card type");
             }
@@ -41,7 +39,6 @@ var nessApp = angular.module('nessExerciseApp',[]);
         }
 
         $scope.checkValidity = function(){
-            //console.log('reaching');
             if($scope.searchQuery.length  < 3 ){
             }else{
                 var searchBoxIconIdVal = document.getElementById('searchBoxIconId');
@@ -51,14 +48,18 @@ var nessApp = angular.module('nessExerciseApp',[]);
 
         $scope.toJsonConverter = function(){
             $scope.showTextArea = true;
-            var myJsonString = JSON.stringify($scope.items);
-            document.getElementById('toJsonTextAreaId').value = myJsonString;
+            var myJsonString = [];
+            for(var i = 0 ; i < $scope.items.length ; i++){
+                 myJsonString.push(JSON.stringify($scope.items[i] , null , 4));
+            }
+            $scope.myJsonStringDisplayArray = myJsonString;
         }
         $scope.search = function(){
+            $scope.realIndexArray = [];
             for(var i = 0 ; i < $scope.items.length ; i++){
                 if($scope.items[i].type === $scope.searchQuery || $scope.items[i].makeName === $scope.searchQuery || $scope.items[i].modelName === $scope.searchQuery){
                     $scope.tobeHighlighted = true;
-                    $scope.rowHighlightManager(i);
+                    $scope.realIndexArray.push(i);
                 }
             }
         }
