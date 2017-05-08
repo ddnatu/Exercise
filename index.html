@@ -4,10 +4,17 @@
         <title>Ness Exercise</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Internal CSS file 'style.css' -->
         <link href="css/style.css" rel="stylesheet">
         
     </head>
     <body>
+        <!--
+            Here Angular.js is used for basic purposes such as Rendering of data , using templates etc , 
+            although this can be done easily with pure Javascript/Jquery as well
+
+            All the CSS classes are self-explanatory.
+        -->
         <div class="mainContainer" ng-app="nessExerciseApp" ng-controller="nessExerciseController">
             <div class="inputElementsContainer">
 
@@ -40,9 +47,9 @@
             </div>
 
 
-            <div class="classA" ng-if="items.length > 0" >
-                <div class="classB" ng-repeat="item in items track by $index" ng-class="{selected: realIndexArray.indexOf($index) > -1}">
-                    <div class="classC" ng-bind="item.type"></div><div class="classC" ng-bind="item.makeName"></div><div class="classC" ng-bind="item.modelName"></div>
+            <div class="classTable" ng-if="items.length > 0" >
+                <div class="classTableRow" ng-repeat="item in items track by $index" ng-class="{selected: realIndexArray.indexOf($index) > -1}">
+                    <div class="classColumn" ng-bind="item.type"></div><div class="classColumn" ng-bind="item.makeName"></div><div class="classColumn" ng-bind="item.modelName"></div>
                 </div>
             </div>
 
@@ -55,8 +62,9 @@
             </div>
         </div>
 
-
+        <!-- External File from CDN angular.min.js -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min.js"></script>
+        <!-- Internal JS file 'main.js' -->
         <script src="js/main.js"></script>
     </body>
 </html>
