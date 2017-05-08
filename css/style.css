@@ -1,0 +1,96 @@
+
+body{
+    font-family: "Segoe UI", Arial, sans-serif !important;
+}
+
+.mainContainer{
+    width: 94%;
+    margin: 5% 0 0 2%;
+}
+
+
+.inputElementsContainer{
+    width: 95%;
+    display: inline-block;
+    background-color:#d8dcd5;
+    padding: 3%;
+}
+.labelTags{
+    display: inline-block;
+        width:calc(100%/3 - 10px); 
+
+}
+.divInputClass{
+    display: inline-block;
+    width:calc(100%/3 - 10px); 
+}
+.selectClass{
+    padding: 7px;
+    background-color:#FFF;
+}
+.makeClass{
+    padding: 7px;
+    background-color:#FFF;
+}
+.modelClass{    
+    padding: 7px;
+    background-color:#FFF;
+}
+.addButton{
+    float: right;
+    margin-top: -35px;
+    margin-right: -16px;
+    cursor: pointer;
+    padding: 6px 17px;
+    background-color: #544f4f;
+    color:#FFF;
+    border: 1px solid;
+    border-radius: 10px; 
+    background: -webkit-linear-gradient(rgba(204, 197, 187, 0.86),#544f4f); /* For Safari */
+    background: -o-linear-gradient(rgba(204, 197, 187, 0.86),#544f4f); /* For Opera  */
+    background: -moz-linear-gradient(rgba(204, 197, 187, 0.86),#544f4f); /* For Firefox  */
+    background: linear-gradient(rgba(204, 197, 187, 0.86),#544f4f); /* Standard syntax */;
+}
+.resultSetContainer{
+    width:91%;
+    text-align: center;
+    padding:5%;
+    background-color:#e7e7f3;
+}
+.resultRows{
+    display: inline-block;
+    width:calc(100%/3 - 10px);
+}
+
+.searchIBoxClass{
+    padding:6px;
+    width:70%;
+}
+.searchBoxIcon{
+    border: 1px solid;
+    border-radius: 10px; 
+    background-color: #544f4f;
+    color:#FFF;
+    padding: 6px 17px;
+    background: -webkit-linear-gradient(rgba(204, 197, 187, 0.86),#544f4f); /* For Safari */
+    background: -o-linear-gradient(rgba(204, 197, 187, 0.86),#544f4f); /* For Opera  */
+    background: -moz-linear-gradient(rgba(204, 197, 187, 0.86),#544f4f); /* For Firefox  */
+    background: linear-gradient(rgba(204, 197, 187, 0.86),#544f4f); /* Standard syntax */
+}
+
+.selected{
+    background-color: palegreen;
+}
+
+.toJsonConverterClass{
+    float: right;
+    border: 1px solid;
+    border-radius: 10px; 
+    background-color: #544f4f;
+    color:#FFF;
+    padding: 6px 17px;
+    background: -webkit-linear-gradient(rgba(204, 197, 187, 0.86),#544f4f); /* For Safari */
+    background: -o-linear-gradient(rgba(204, 197, 187, 0.86),#544f4f); /* For Opera  */
+    background: -moz-linear-gradient(rgba(204, 197, 187, 0.86),#544f4f); /* For Firefox  */
+    background: linear-gradient(rgba(204, 197, 187, 0.86),#544f4f); /* Standard syntax */
+}
